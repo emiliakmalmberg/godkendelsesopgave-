@@ -12,3 +12,4 @@ app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 server.post 
 
 //laver JWT endpoint til mine CRUD endpoints så serveren kan hente dataen
+gugug
