@@ -1,15 +1,38 @@
-//MIN API - Express er en node-pakke, som gør det nemt at lave en webserver. Vi bruger den til at lave API. Installer med npm install express
+//MIN API - Express er en node-pakke, som gør det nemt at lave en webserver:
 const express = require ("express");
 
-//We are initializing the express framework and saving it into another constant, vi navngiver den 4000
-const app = express ();
-const PORT = 4000;
+//We are initializing the express framework and saving it into another constant - vi navngiver den 5000:
+const server = express ();
+const PORT = 5000;
+//Gør at vi kan se om serveren kører på port 5000, bekræftes i ternimalen: 
+server.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 
-//CRUD endpoints
+//skrevet som konstanter så man kan gemme data i det:
+const user = require('./models/user')
+const interest = require('./models/interest')
+const image = require('./models/image')
 
-server.post 
+const hardUser = require('./hardUser.js')
+const hardMatch = require('./hardMatch.js');
 
-//laver JWT endpoint til mine CRUD endpoints så serveren kan hente dataen
-gugug
+//Prøvede at opsætte jwt op i serveren: 
+const {JsonWebTokenError} = require("jsonwebtoken");
+
+
+// Mine CRUD endpoints, indeholder array så jeg kan teste om den virker i postman app
+//til user
+server.get('/user1', (req, res) => {
+  //fortæller at den skal sende data fra mit første array tilbage
+  res.send(user.hardUser[0]);
+})
+
+//til match
+server.delete('/match', (req,res) => {
+  res.send(hardMatch[0]);
+})
+
+//til interest
+server.get('./interest', (req, res) => {
+  res.send(hardInterest[0]);
+})

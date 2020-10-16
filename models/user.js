@@ -14,6 +14,7 @@ class paymentUser extends user{
         this.cvvCode=cvvCode;
     }
 }
+
 //min undertype af freeuser, hvor man så kun skal opgive brugeroplysninger og ingen kreditkort oplysninger
 class freeUser extends user{
     constructor(userName, password,email){
@@ -22,27 +23,3 @@ class freeUser extends user{
         this.email=email;
 }
     }
-
-class interest{
-        constructor(hobbies,sexualPreference){
-            this.hobbies=hobbies;
-            this.sexualPreference=sexualPreference;
-        }
-    }
-module.exports=interest 
-
-
-class match{
-    constructor(idofuserone,idofusertwo){
-        this.idofuserone=idofuserone;
-        this.idofusertwo=idofusertwo;
-    }
-}
-module.exports=match 
-
-class image{
-    constructor(type,size){
-        this.type=type;
-        this.size=size;
-    }
-}

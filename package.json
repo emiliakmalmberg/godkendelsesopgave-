@@ -1,15 +1,26 @@
 {
   "name": "godkendelsesopgave-3",
   "version": "1.0.0",
-  "description": "",
+  "description": "\"# godkendelsesopgave-\"",
   "main": "clientgotre.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon servergotre.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
-    "jsonwebtoken": "^8.5.1"
-  }
+    "jsonwebtoken": "^8.5.1",
+    "nodemon": "^2.0.5"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emiliakmalmberg/godkendelsesopgave-.git"
+  },
+  "bugs": {
+    "url": "https://github.com/emiliakmalmberg/godkendelsesopgave-/issues"
+  },
+  "homepage": "https://github.com/emiliakmalmberg/godkendelsesopgave-#readme"
 }
